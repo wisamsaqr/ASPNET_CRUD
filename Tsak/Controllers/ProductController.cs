@@ -26,13 +26,13 @@ namespace Tsak.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(CreateProductDto createProductDto)
+        public IActionResult Create([FromBody] CreateProductDto createProductDto)
         {
             return Ok(productService.Create(createProductDto));
         }
 
         [HttpPut]
-        public IActionResult Edit(EditProductDto editProductDto)
+        public IActionResult Edit([FromBody] EditProductDto editProductDto)
         {
             return Ok(productService.Edit(editProductDto));
         }
